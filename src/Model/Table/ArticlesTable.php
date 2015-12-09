@@ -22,14 +22,11 @@ class ArticlesTable extends Table
      */
     public function initialize(array $config)
     {
-        parent::initialize($config);
-
-        $this->table('articles');
-        $this->displayField('title');
-        $this->primaryKey('id');
-
-        $this->addBehavior('Timestamp');
-
+       $this->addBehavior('Timestamp');
+        // Just add the belongsTo relation with CategoriesTable
+        $this->belongsTo('Categories', [
+            'foreignKey' => 'category_id',
+        ]);
     }
 
     /**
@@ -52,4 +49,9 @@ class ArticlesTable extends Table
 
         return $validator;
     }
+	
+	public function isOwnedBy($articleId, $userId)
+	{
+    return $this->exists(['id' => $articleId, 'user_id' => $userId]);
+	}
 }

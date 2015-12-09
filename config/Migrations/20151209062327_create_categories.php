@@ -16,7 +16,7 @@ class CreateCategories extends AbstractMigration
         $table->addColumn('parent_id', 'integer', [
             'default' => null,
             'limit' => 11,
-            'null' => True,
+            'null' => true,
         ]);
         $table->addColumn('lft', 'integer', [
             'default' => null,
