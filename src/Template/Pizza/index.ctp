@@ -9,13 +9,13 @@
     <table cellpadding="0" cellspacing="0">
         <thead>
             <tr>
-                <th><?= $this->Paginator->sort('id') ?></th>
-                <th><?= $this->Paginator->sort('pizzasize') ?></th>
-                <th><?= $this->Paginator->sort('crusttype') ?></th>
-                <th><?= $this->Paginator->sort('toppings') ?></th>
-                <th><?= $this->Paginator->sort('customername') ?></th>
-                <th><?= $this->Paginator->sort('customeraddress') ?></th>
-                <th><?= $this->Paginator->sort('customercontact') ?></th>
+                <th><?= $this->Paginator->sort('Id') ?></th>
+                <th><?= $this->Paginator->sort('Pizza Size') ?></th>
+                <th><?= $this->Paginator->sort('Crust Type') ?></th>
+                <th><?= $this->Paginator->sort('Toppings') ?></th>
+                <th><?= $this->Paginator->sort('Customer Name') ?></th>
+                <th><?= $this->Paginator->sort('Customer Address') ?></th>
+                <th><?= $this->Paginator->sort('Customer Contact') ?></th>
                 <th class="actions"><?= __('Actions') ?></th>
             </tr>
         </thead>
